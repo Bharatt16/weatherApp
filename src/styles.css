@@ -1,6 +1,61 @@
-body{
-    background-color: #111;
+*{
+     margin : 0 ;
+     padding : 0 ; 
+     box-sizing: border-box;
+     font-family: monospace;
 }
-h1{
-    color : white ;
+
+nav{
+    display : flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin : 1rem;
+    padding : 1rem;
+    padding-bottom  : 1.5rem;
+    border-bottom :1px solid black
+}
+
+nav>input{
+    width : 19rem;
+    padding : 0.5rem;
+    border-radius : 1rem;
+}
+
+nav>select{
+    padding : 0.5rem;
+    border-radius : 1rem;
+
+}
+
+nav>h2{
+    font-size: 2rem;
+}
+
+main{
+    margin : 1rem;
+    background-color: lightblue;
+    /* width : 100%; */
+    height : 37rem;
+}
+
+.containerONE{
+    display : flex;
+}
+.containerONE-left, .containerONE-right{
+    width: 50%;
+    /* color: lightcoral; */
+    height: 20rem;
+    /* z-index: 2; */
+    border: 2px solid black;
+}
+
+.containerTWO{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.forecasts{
+    border : 2px solid black ;
+     height : 16rem;
+     width : 18rem;     
 }

@@ -21,23 +21,66 @@
     <main>
         <div class="containerONE">
             <div class="containerONE-left">
-                <div class="todayTemp">
+               <div class="temp-wrapper">
+                <div class="tempIcon"></div>
+                <div class="todayTemp"></div>
+               </div>
+               <div class="tempCondition">
 
-                </div>
+               </div>
             </div>
             <div class="containerONE-right">
-                <div class="feelsLike"></div>
-                <div class="humidity"></div>
-                <div class="wind"></div>
+               <ul>
+                    <li> <div class="feelsLike">
+                        <img src="./utilities/feelsLike.svg" alt="">
+                        <p class="stats">Feels Like : </p>
+                        <p class="feelsLikeData"></p>
+                    </div></li>
+                    <li> <div class="humidity">
+                        <img src="./utilities/humidity.svg" alt="">
+                        <p class="stats">Humidity : </p>
+                        <p class="humidityData"></p>
+                    </div></li>
+                    <li><div class="wind">
+                        <img src="./utilities/wind.svg" alt="">
+                        <p class="stats">Wind : </p>
+                        <p class="windData"></p>
+                    </div></li>
+                    <li><div class="cloudCover">
+                        <img src="./utilities/cloud.svg" alt="">
+                        <p class="stats">Cloud Cover : </p>
+                        <p class="cloudCoverData"></p>
+                    </div></li>
+               </ul>
             </div>
         </div>
 
         <div class="containerTWO">
-            <div class="forecasts"></div>
-            <div class="forecasts"></div>
-            <div class="forecasts"></div>
-            <div class="forecasts"></div>
-            <div class="forecasts"></div>
+            <div class="forecasts-1">
+                <h2 class="date"></h2>
+                <!-- <img src="" alt=""> -->
+                <p class="forecastTemp"></p>
+            </div>
+            <div class="forecasts-2">
+                <h2 class="date"></h2>
+                <!-- <img src="" alt=""> -->
+                <p class="forecastTemp"></p>
+            </div>
+            <div class="forecasts-3">
+                <h2 class="date"></h2>
+                <!-- <img src="" alt=""> -->
+                <p class="forecastTemp"></p>
+            </div>
+            <div class="forecasts-4">
+                <h2 class="date"></h2>
+                <!-- <img src="" alt=""> -->
+                <p class="forecastTemp"></p>
+            </div>
+            <div class="forecasts-5">
+                <h2 class="date"></h2>
+                <!-- <img src="" alt=""> -->
+                <p class="forecastTemp"></p>
+            </div>
         </div>
     </main>
 </body>

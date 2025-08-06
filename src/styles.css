@@ -15,10 +15,16 @@ nav{
     border-bottom :1px solid black
 }
 
-nav>input{
+.searchDiv>input{
     width : 19rem;
     padding : 0.5rem;
     border-radius : 1rem;
+}
+
+.searchDiv>button{
+    padding : 0.5rem;
+    border-radius : 1rem;
+
 }
 
 nav>select{
@@ -29,6 +35,11 @@ nav>select{
 
 nav>h2{
     font-size: 2rem;
+}
+
+.searchDiv{
+     display : flex;
+     gap : 1rem;
 }
 
 main{

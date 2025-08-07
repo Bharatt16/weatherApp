@@ -97,8 +97,13 @@ main{
     font-size: 3rem;
     font-weight: 900;
 }
+
+.tempIcon>img{
+    height : 10rem;
+}
+
 .tempCondition{
-    font-size : 2rem;
+    font-size : 1.5rem;
     width : 30rem;
 }
 

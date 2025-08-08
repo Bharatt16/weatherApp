@@ -8,7 +8,7 @@
 <body>
 
     <nav>
-        <h2>Atmos</h3>
+        <h2>Breeze</h2>
         <div class="searchDiv">
             <input type="search" name="" id="search" placeholder="Search">
             <button type="submit">Submit</button>
@@ -18,6 +18,15 @@
             <option value="F">Fahrenheit</option>
         </select>
     </nav>
+
+
+    <div class="loader-container" id="loader">
+        <div class="spinner"></div>
+        <p>Loading Weather Data...</p>
+    </div>
+
+
+
     <main>
         <div class="containerONE">
             <div class="containerONE-left">
@@ -33,26 +42,37 @@
             </div>
             <div class="containerONE-right">
                <ul>
-                    <li> <div class="feelsLike">
-                        <img src="./utilities/feelsLike.svg" alt="">
-                        <p class="stats">Feels Like : </p>
+                <li>
+                    <div class="feelsLike">
+                        <img class="icon-feels-like" alt="Feels Like">
+                        <!-- <div class="wrapperDiv"> -->
+                        <p class="stats">Feels Like :      </p>
                         <p class="feelsLikeData"></p>
-                    </div></li>
-                    <li> <div class="humidity">
-                        <img src="./utilities/humidity.svg" alt="">
-                        <p class="stats">Humidity : </p>
+                        <!-- </div> -->
+                    </div>
+                </li>
+                <li>
+                    <div class="humidity">
+                        <img class="icon-humidity" alt="Humidity">
+                        <p class="stats">Humidity   :      </p>
                         <p class="humidityData"></p>
-                    </div></li>
-                    <li><div class="wind">
-                        <img src="./utilities/wind.svg" alt="">
-                        <p class="stats">Wind : </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="wind">
+                        <img class="icon-wind" alt="Wind">
+                        <p class="stats">Wind       :      </p>
                         <p class="windData"></p>
-                    </div></li>
-                    <li><div class="cloudCover">
-                        <img src="./utilities/cloud.svg" alt="">
-                        <p class="stats">Cloud Cover : </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="cloudCover">
+                        <img class="icon-cloud" alt="Cloud Cover">
+                        <p class="stats">Cloud Cover :     </p>
                         <p class="cloudCoverData"></p>
-                    </div></li>
+                    </div>
+                </li>
+                
                </ul>
             </div>
         </div>

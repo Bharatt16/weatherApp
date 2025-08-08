@@ -107,9 +107,9 @@ function setWeatherBackground(iconName) {
     const weatherBackgrounds = {
         'clear-day': '/utilities/ClearDay.jpg',
         'clear-night': '/utilities/ClearDay.jpg',
-        'cloudy': '/utilities/CloudDay.jpg',
-        'partly-cloudy-day': '/utilities/CloudDay.jpg',
-        'partly-cloudy-night': '/utilities/CloudDay.jpg',
+        'cloudy': '/utilities/CloudDay.jpeg',
+        'partly-cloudy-day': '/utilities/CloudDay.jpeg',
+        'partly-cloudy-night': '/utilities/CloudDay.jpeg',
         'rain': '/utilities/RainyDay.jpg',
         'thunder-rain': '/utilities/RainyDay.jpg',
         'showers-day': '/utilities/RainyDay.jpg',
@@ -143,6 +143,55 @@ font.load().then(() => {
 
 
 
+
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+  return (fahrenheit - 32) * 5/9;
+}
+
+
+const tempSelect = document.getElementById('temp');
+
+tempSelect.addEventListener('change', () => {
+  // Get selected unit
+  const isFahrenheit = tempSelect.value === 'fahrenheit';
+  
+  // Get all temperature elements that need updating
+  const elementsToUpdate = [
+    { selector: '.todayTemp', type: 'main' },
+    { selector: '.feelsLikeData', type: 'main' },
+    { selector: '.forecasts-1 > .forecastTemp', type: 'forecast' },
+    { selector: '.forecasts-2 > .forecastTemp', type: 'forecast' },
+    { selector: '.forecasts-3 > .forecastTemp', type: 'forecast' },
+    { selector: '.forecasts-4 > .forecastTemp', type: 'forecast' },
+    { selector: '.forecasts-5 > .forecastTemp', type: 'forecast' }
+  ];
+
+  elementsToUpdate.forEach(item => {
+    const element = document.querySelector(item.selector);
+    if (!element) return;
+
+    // Get current displayed value and unit (store as data attribute)
+    let currentValue = parseFloat(element.textContent.replace('°C', '').replace('°F', '').trim());
+    if (isNaN(currentValue)) return;
+
+    // Convert based on selected unit
+    let newValue, newUnit;
+    if (isFahrenheit) {
+      newValue = celsiusToFahrenheit(currentValue);
+      newUnit = '°F';
+    } else {
+      newValue = fahrenheitToCelsius(currentValue);
+      newUnit = '°C';
+    }
+
+    // Update display
+    element.textContent = `${Math.round(newValue)}${newUnit}`;
+  });
+});
 
 
 

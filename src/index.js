@@ -6,10 +6,10 @@ let submitBtn = document.querySelector('.searchDiv>button');
 let input = document.querySelector('.searchDiv>input');
 
 // Set static SVG icons
-document.querySelector('.icon-feels-like').src = '/utilities/feelsLike.svg';
-document.querySelector('.icon-humidity').src = '/utilities/humidity.svg';
-document.querySelector('.icon-wind').src = '/utilities/wind.svg';
-document.querySelector('.icon-cloud').src = '/utilities/cloud.svg';
+document.querySelector('.icon-feels-like').src = 'utilities/feelsLike.svg';
+document.querySelector('.icon-humidity').src = 'utilities/humidity.svg';
+document.querySelector('.icon-wind').src = 'utilities/wind.svg';
+document.querySelector('.icon-cloud').src = 'utilities/cloud.svg';
 
 // **LOADER FUNCTIONS** 
 function showLoader() {
@@ -61,7 +61,7 @@ submitBtn.addEventListener('click', async () => {
         
         //for icons
         let iconName = data.days[0].icon;
-        let iconPath = `/utilities/${iconName}.png`
+        let iconPath = `utilities/${iconName}.png`
         let img = document.createElement('img');
         img.src = iconPath;
         img.alt = 'Weather Icon'
@@ -84,7 +84,7 @@ submitBtn.addEventListener('click', async () => {
             //  for icons 
             let forecastIcon = data.days[i].icon;
             let img = document.createElement('img');
-            img.src = `/utilities/${forecastIcon}.png`;
+            img.src = `utilities/${forecastIcon}.png`;
             img.alt = 'forecast Icon';
             let iconContainer = document.querySelector(`.forecasts-${i}>.iconWrapper`);
             iconContainer.innerHTML = "";
@@ -105,20 +105,20 @@ submitBtn.addEventListener('click', async () => {
 
 function setWeatherBackground(iconName) {
     const weatherBackgrounds = {
-        'clear-day': '/utilities/ClearDay.jpg',
-        'clear-night': '/utilities/ClearDay.jpg',
-        'cloudy': '/utilities/CloudDay.jpeg',
-        'partly-cloudy-day': '/utilities/CloudDay.jpeg',
-        'partly-cloudy-night': '/utilities/CloudDay.jpeg',
-        'rain': '/utilities/RainyDay.jpg',
-        'thunder-rain': '/utilities/RainyDay.jpg',
-        'showers-day': '/utilities/RainyDay.jpg',
-        'showers-night': '/utilities/RainyDay.jpg',
-        'snow': '/utilities/SnowDay.jpg',
-        'wind': '/utilities/WindDay.jpg'
+        'clear-day': 'utilities/ClearDay.jpg',
+        'clear-night': 'utilities/ClearDay.jpg',
+        'cloudy': 'utilities/CloudDay.jpeg',
+        'partly-cloudy-day': 'utilities/CloudDay.jpeg',
+        'partly-cloudy-night': 'utilities/CloudDay.jpeg',
+        'rain': 'utilities/RainyDay.jpg',
+        'thunder-rain': 'utilities/RainyDay.jpg',
+        'showers-day': 'utilities/RainyDay.jpg',
+        'showers-night': 'utilities/RainyDay.jpg',
+        'snow': 'utilities/SnowDay.jpg',
+        'wind': 'utilities/WindDay.jpg'
     };
     
-    const backgroundImage = weatherBackgrounds[iconName] || '/utilities/DefaultWeather.jpg';
+    const backgroundImage = weatherBackgrounds[iconName] || 'utilities/DefaultWeather.jpg';
     
     // Set background with proper CSS properties
     document.body.style.backgroundImage = `url('${backgroundImage}')`;
@@ -129,7 +129,7 @@ function setWeatherBackground(iconName) {
     document.body.style.transition = 'background-image 0.5s ease';
 }
 
-const font = new FontFace('NewFont', 'url(/utilities/fonts/Norse-bold.otf)', {
+const font = new FontFace('NewFont', 'url(utilities/fonts/Norse-bold.otf)', {
     weight : '700', // Fixed weight for bold font
     style : 'normal'
 });

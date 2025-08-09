@@ -11,7 +11,7 @@
 } */
 
 body {
-  background-image: url("/public/utilities/MainBg.jpeg");
+  /* background-image: url("utilities/MainBg.jpeg"); */
   background-size: cover; /* Covers entire container */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repetition */
